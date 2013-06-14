@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/pizza_theme.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile.structure-1.3.1.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/jquery.js"></script>
+    <!--  <script src="js/jquery.mobile-1.3.1.js"></script> -->
+    <script src="js/jquery.mobile-1.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="home">
+    <div data-role="header" data-theme="c">
+        <h2>Pete's Pizza Parlor</h2>
+    </div>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li>
+                <a href="#home" class="ui-btn-active ui-state-persist" data-transition="fade" data-theme="c" data-icon="home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#menu" data-transition="fade" data-theme="c" data-icon="bars">
+                    Menu
+                </a>
+            </li>
+            <li>
+                <a href="#order" data-transition="fade" data-theme="c" data-icon="check">
+                    Order
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="content">
+        <ul data-role="listview" data-divider-theme="c" data-inset="true">
+            <li data-theme="c">
+                <a href="#menu" data-transition="slide">
+                    Menu
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#order" data-transition="slide">
+                    Order
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#location" data-transition="slide">
+                    Location
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#about_us" data-transition="slide">
+                    About Us
+                </a>
+            </li>
+        </ul>
+        <a href="tel:5555555555" data-role="button" rel="external">Call Us</a>
+    </div>
+
+    <div class="footer" data-role="footer" data-theme="c">
+        <a href="#home">Home</a> <a href="#menu">Menu</a> <a href="#order">Order</a> <a href="#location">Location</a> <a href="#about_us">About Us</a>
+    </div>
+</div>
+
+<div data-role="page" id="menu">
+    <div data-role="header" data-theme="c">
+        <h2>Pete's Pizza Parlor</h2>
+    </div>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li>
+                <a href="#home" data-transition="fade"  data-theme="c" data-icon="home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#menu" class="ui-btn-active ui-state-persist"  data-theme="c" data-icon="bars">
+                    Menu
+                </a>
+            </li>
+            <li>
+                <a href="#order" data-transition="fade"  data-theme="c" data-icon="check">
+                    Order
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="content">
+        <div id="order_nav" data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#order_pizza" data-transition="fade" data-theme="c">
+                        Pizza
+                    </a>
+                </li>
+                <li>
+                    <a href="#order_drinks" data-transition="fade" data-theme="c">
+                        Drinks
+                    </a>
+                </li>
+                <li>
+                    <a href="#order_sides" data-transition="fade" data-theme="c">
+                        Sides
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="order_pizza">
+            <h3>Pizza</h3>
+            <form action="">
+                <div id="custom_pizza" data-role="collapsible-set" data-theme="c" data-content-theme="c">
+                    <div data-role="collapsible">
+                        <h3 id="size_text">Size - Medium (12") $7.99</h3>
+                        <div data-role="fieldcontain">
+                            <select id="pizza_size" name="pizza_size">
+                                <option value="small" data-price="5.99" data-info="Small">
+                                    Small (10") $5.99
+                                </option>
+                                <option value="medium"  data-price="7.99" data-info="Medium" selected>
+                                    Medium (12") $7.99
+                                </option>
+                                <option value="large" data-price="9.99" data-info="Large">
+                                    Large (14") $9.99
+                                </option>
+                                <option value="xlarge" data-price="11.99" data-info="X-Large">
+                                    X-Large (16") $11.99
+                                </option>
+                                <option value="godzilla" data-price="29.99" data-info="Godzilla">
+                                    Godzilla (30") $29.99
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-theme="c" data-content-theme="c">
+                        <h3 id="crust_text">Crust - Hand Tossed</h3>
+                        <div data-role="fieldcontain">
+                            <select id="pizza_crust" name="pizza_crust">
+                                <option value="hand_tossed" data-info="Hand Tossed" selected>
+                                    Hand Tossed
+                                </option>
+                                <option value="pan" data-info="Pan">
+                                    Pan
+                                </option>
+                                <option value="thin" data-info="Thin Crust">
+                                    Thin Crust
+                                </option>
+                                <option value="gluten_free" data-info="Gluten Free">
+                                    Gluten Free
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-theme="c" data-content-theme="c">
+                        <h3 id="sauce_text">Sauce - Normal Tomato Sauce</h3>
+                        <div data-role="fieldcontain">
+                            <fieldset id="sauce_type" data-role="controlgroup" data-type="horizontal">
+                                <input id="tomato" name="sauce" value="tomato" data-theme="c" type="radio" data-info="Tomato Sauce" checked>
+                                <label for="tomato">
+                                    Tomato
+                                </label>
+                                <input id="bbq" name="sauce" value="bbq" data-theme="c" type="radio" data-info="BBQ Sauce">
+                                <label for="bbq">
+                                    BBQ
+                                </label>
+                                <input id="white" name="sauce" value="white" data-theme="c" type="radio" data-info="White Sauce">
+                                <label for="white">
+                                    White
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div data-role="fieldcontain">
+                            <select id="sauce_amount" name="sauce_amount">
+                                <option value="no_sauce" data-price="0" data-info="No Sauce">
+                                    No Sauce
+                                </option>
+                                <option value="light" data-price="0" data-info="Light">
+                                    Light
+                                </option>
+                                <option value="normal" data-price="0" data-info="Normal" selected>
+                                    Normal
+                                </option>
+                                <option value="extra" data-price="0.3" data-info="Extra">
+                                    Extra (+ $0.30)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-theme="c" data-content-theme="c">
+                        <h3 id="cheese_text">Cheese - Normal</h3>
+                        <div data-role="fieldcontain">
+                            <select id="cheese_amount" name="cheese_amount">
+                                <option value="no_cheese" data-price="0" data-info="No">
+                                    No Cheese
+                                </option>
+                                <option value="light" data-price="0" data-info="Light">
+                                    Light
+                                </option>
+                                <option value="normal" data-price="0" data-info="Normal" selected>
+                                    Normal
+                                </option>
+                                <option value="extra" data-price="0.3" data-info="Extra">
+                                    Extra (+ $0.30)
+                                </option>
+                                <option value="double" data-price="0.6" data-info="Double">
+                                    Double (+ $0.60)
+                                </option>
+                                <option value="triple" data-price="0.9" data-info="Triple">
+                                    Triple (+ $0.90)
+                                </option>
+                                <option value="quadruple" data-price="1.2" data-info="Quadruple">
+                                    Quadruple (+ $1.20)
+                                </option>
+                                <option value="quintuple" data-price="1.5" data-info="Quintuple">
+                                    Quintuple (+ $1.50)
+                                </option>
+                                <option value="sextuple" data-price="1.8" data-info="Sextuple">
+                                    Sextuple (+ $1.80)
+                                </option>
+                                <option value="septuple" data-price="2.1" data-info="Septuple">
+                                    Septuple (+ $2.10)
+                                </option>
+                                <option value="octuple" data-price="2.4" data-info="Octuple">
+                                    Octuple (+ $2.40)
+                                </option>
+                                <option value="nonuple" data-price="2.7" data-info="Nonuple">
+                                    Nonuple (+ $2.70)
+                                </option>
+                                <option value="Decuple" data-price="3" data-info="Decuple">
+                                    Decuple (+ $3.00)
+                                </option>
+                                <option value="centuple" data-price="33.33" data-info="Centuple">
+                                    Centuple (+ $33.33)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div data-role="collapsible" data-theme="c" data-content-theme="c">
+                        <h3 id="toppings_text">Toppings <span id="num_text"></span> </h3>
+                        <div id="toppings" data-role="fieldcontain">
+                            <p>*Every pizza comes with two toppings, each additional topping costs an extra $0.50</p>
+                            <fieldset data-role="controlgroup" data-type="vertical">
+                                <input id="pepperoni" name="pepperoni" data-theme="c" type="checkbox" data-info="Pepperoni">
+                                <label for="pepperoni">
+                                    Pepperoni
+                                </label>
+                                <input id="ham" name="ham" data-theme="c" type="checkbox" data-info="Ham">
+                                <label for="ham">
+                                    Ham
+                                </label>
+                                <input id="bacon" name="bacon" data-theme="c" type="checkbox" data-info="Bacon">
+                                <label for="bacon">
+                                    Bacon
+                                </label>
+                                <input id="sausage" name="sausage" data-theme="c" type="checkbox" data-info="Sausage">
+                                <label for="sausage">
+                                    Sausage
+                                </label>
+                                <input id="beef" name="beef" data-theme="c" type="checkbox" data-info="Beef">
+                                <label for="beef">
+                                    Beef
+                                </label>
+                                <input id="chicken" name="chicken" data-theme="c" type="checkbox" data-info="Chicken">
+                                <label for="chicken">
+                                    Chicken
+                                </label>
+                                <input id="pineapple" name="pineapple" data-theme="c" type="checkbox" data-info="Pineapple">
+                                <label for="pineapple">
+                                    Pineapple
+                                </label>
+                                <input id="black_olives" name="black_olives" data-theme="c" type="checkbox" data-info="Black Olives">
+                                <label for="black_olives">
+                                    Black Olives
+                                </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <p id="pizza_subtotal"></p>
+                <div id="pizza_btns" data-role="controlgroup" data-type="horizontal" data-theme="c">
+                    <a id="price_pizza" href="#" data-role="button">Price of Pizza</a>
+                    <a id="add_pizza" data-rel="dialog" data-transition="pop" href="#order_confirm" data-role="button">Add to Order</a>
+                </div>
+            </form>
+        </div>
+        <div id="order_drinks" class="hide_tab">
+            <h3>Drinks</h3>
+            <p>*Each drink costs $1.50</p>
+            <form action="">
+                <div id="drink_selection" data-role="fieldcontain" data-theme="c">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <input id="coke" name="coke" data-theme="c"  type="checkbox" data-info="Coke">
+                        <label for="coke">
+                            Coke
+                        </label>
+                        <input id="pepsi" name="pepsi" data-theme="c" type="checkbox" data-info="Pepsi">
+                        <label for="pepsi">
+                            Pepsi
+                        </label>
+                        <input id="sierra" name="sierra" data-theme="c" type="checkbox" data-info="Sierra Mist">
+                        <label for="sierra">
+                            Sierra Mist
+                        </label>
+                        <input id="root_beer" name="root_beer" data-theme="c" type="checkbox" data-info="Root Beer">
+                        <label for="root_beer">
+                            Root Beer
+                        </label>
+                        <input id="orange" name="orange" data-theme="c" type="checkbox" data-info="Orange Soda">
+                        <label for="orange">
+                            Orange Soda
+                        </label>
+                    </fieldset>
+                    <p><a href="#order_confirm" id="add_drinks" data-rel="dialog" data-transition="pop" data-role="button">Add to Order</a></p>
+                </div>
+
+            </form>
+        </div>
+        <div id="order_sides" class="hide_tab">
+            <h3>Sides</h3>
+            <form action="">
+                <div id="sides_selection" data-role="fieldcontain" data-theme="c">
+                        <fieldset data-role="controlgroup" data-type="vertical">
+                            <input id="bread_sticks" name="bread_sticks" data-theme="c" type="checkbox" data-info="Bread Sticks" data-price="2.99">
+                            <label for="bread_sticks">
+                                Bread Sticks - 8 piece (+$2.99)
+                            </label>
+                            <input id="cinna_sticks" name="cinna_sticks" data-theme="c" type="checkbox" data-info="Cinnamon Sticks" data-price="2.99">
+                            <label for="cinna_sticks">
+                                Cinnamon Sticks - 8 piece (+$2.99)
+                            </label>
+                            <input id="chicken_wings" name="chicken_wings" data-theme="c" type="checkbox" data-info="Chicken Wings" data-price="4.99">
+                            <label for="chicken_wings">
+                                Chicken Wings - 16 piece (+$4.99)
+                            </label>
+                            <input id="boneless" name="boneless" data-theme="c" type="checkbox" data-info="Boneless Wings" data-price="5.99">
+                            <label for="boneless">
+                                Boneless - 16 piece (+$5.99)
+                            </label>
+                        </fieldset>
+                    <a id="add_side" href="#" data-role="button">Add to Order</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer" data-role="footer" data-theme="c">
+        <a href="#home">Home</a> <a href="#menu">Menu</a> <a href="#order">Order</a> <a href="#location">Location</a> <a href="#about_us">About Us</a>
+    </div>
+</div>
+
+<div data-role="dialog" id="order_confirm">
+
+    <div data-role="content" data-theme="c">
+        <h2>Added</h2>
+        <div id="order_details">
+
+        </div>
+        <div id="confirm_btns">
+            <a class="close_dialog" href="#" data-rel="back" data-role="button">Add More</a>
+            <a class="close_dialog" href="#order" data-role="button">Go to Order</a>
+        </div>
+    </div>
+
+</div>
+
+<div data-role="page" id="order">
+    <div data-role="header" data-theme="c">
+        <h2>Pete's Pizza Parlor</h2>
+    </div>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li>
+                <a href="#home" data-transition="fade" data-theme="c" data-icon="home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#menu" data-transition="fade" data-theme="c" data-icon="bars">
+                    Menu
+                </a>
+            </li>
+            <li>
+                <a href="#order" class="ui-btn-active ui-state-persist" data-transition="fade" data-theme="c" data-icon="check">
+                    Order
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="content" data-theme="c">
+        <div id="display_order">
+
+        </div>
+        <p id="grand_total"></p>
+
+        <div id="order_btns">
+            <a href="#" id="calc_total" data-role="button">Calculate Total</a>
+            <a href="#" id="submit_order" data-role="button">Submit Order</a>
+        </div>
+    </div>
+
+    <div id="saved">
+        <button id="save_order">Save Order</button>
+        <button id="load_order">Load Order</button>
+    </div>
+
+    <div class="footer" data-role="footer" data-theme="c">
+        <a href="#home">Home</a> <a href="#menu">Menu</a> <a href="#order">Order</a> <a href="#location">Location</a> <a href="#about_us">About Us</a>
+    </div>
+</div>
+
+<div data-role="page" id="location" data-theme="c">
+    <div data-role="header">
+        <h2>Pete's Pizza Parlor</h2>
+    </div>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li>
+                <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#menu" data-transition="fade" data-theme="" data-icon="bars">
+                    Menu
+                </a>
+            </li>
+            <li>
+                <a href="#order" data-transition="fade" data-theme="" data-icon="check">
+                    Order
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="content">
+        <script>
+            $(document).ready(function (){
+                navigator.geolocation.getCurrentPosition(function(pos){
+                    var lat = pos.coords.latitude;
+                    var lng = pos.coords.longitude;
+                    var map = '<iframe width="320" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=d&amp;source=s_d&amp;saddr=' +
+                             lat + ',' + lng + '&amp;daddr=Domino\'s+Pizza,+West+3rd+Avenue,+Spokane,+WA&amp;hl=en&amp;geocode=FRw31wIdgTgA-Q%3BFYYj1wIdv0MA-SGkJsydiLTRvykZ-Vo7ZBieVDGkJsydiLTRvw&amp;aq=1&amp;oq=domino&amp;sll=47.67284,-117.41215&amp;sspn=0.376824,0.576096&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=47.656225,-117.424622&amp;spn=0.010117,0.018239&amp;z=15&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=d&amp;source=embed&amp;saddr=' +
+                             lat + ',' + lng + '&amp;daddr=Domino\'s+Pizza,+West+3rd+Avenue,+Spokane,+WA&amp;hl=en&amp;geocode=FRw31wIdgTgA-Q%3BFYYj1wIdv0MA-SGkJsydiLTRvykZ-Vo7ZBieVDGkJsydiLTRvw&amp;aq=1&amp;oq=domino&amp;sll=47.67284,-117.41215&amp;sspn=0.376824,0.576096&amp;mra=ls&amp;ie=UTF8&amp;t=m&amp;ll=47.656225,-117.424622&amp;spn=0.010117,0.018239&amp;z=15" style="color:#0000FF;text-align:left">View Larger Map</a></small>';
+                    $("#direct_map div").html(map);
+                });
+            });
+        </script>
+        <div id="direct_map">
+            <h3>Location</h3>
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" data-role="footer">
+        <a href="#home">Home</a> <a href="#menu">Menu</a> <a href="#order">Order</a> <a href="#location">Location</a> <a href="#about_us">About Us</a>
+    </div>
+</div>
+
+<div data-role="page" id="about_us">
+    <div data-role="header">
+        <h2>Pete's Pizza Parlor</h2>
+    </div>
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li>
+                <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#menu" data-transition="fade" data-theme="" data-icon="bars">
+                    Menu
+                </a>
+            </li>
+            <li>
+                <a href="#order" data-transition="fade" data-theme="" data-icon="check">
+                    Order
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="content">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis sapien rutrum justo luctus eleifend. Aliquam nibh lorem, convallis et viverra id, gravida in sapien. Nulla pretium, sem vel ultricies tincidunt, lorem enim pretium libero, id luctus ligula lacus ut lorem. Praesent lectus dolor, egestas ut congue a, pharetra condimentum nisi. Morbi ut mi odio. Nunc iaculis egestas neque pulvinar tempor. Morbi tristique felis nec risus iaculis eget viverra urna lobortis. Donec semper adipiscing enim vitae dictum. Praesent quis tellus ac sapien dignissim luctus eu nec ante. Vestibulum bibendum dictum fermentum. In consectetur pellentesque turpis vulputate pellentesque. Aliquam vehicula sagittis eros, at semper dolor fringilla a. Curabitur pharetra justo in nulla malesuada varius.</p>
+    </div>
+
+    <div class="footer" data-role="footer">
+        <a href="#home">Home</a> <a href="#menu">Menu</a> <a href="#order">Order</a> <a href="#location">Location</a> <a href="#about_us">About Us</a>
+    </div>
+</div>
+
+</body>
+</html>

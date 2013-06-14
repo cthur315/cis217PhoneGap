@@ -1,0 +1,78 @@
+.bold_text {
+    font-weight: bolder;
+}
+
+.pizza_name {
+    margin-bottom: 1px;
+}
+
+.pizza_info {
+    margin: 0 0 0 10px;;
+    font-size: .7em;
+}
+
+.price {
+    margin: 0;
+    text-align: right;
+}
+
+#grand_total {
+    text-align: right;
+}
+
+.order_item {
+    border-bottom: dashed 1px black;
+}
+
+#menu h3 {
+    text-align: center;
+}
+
+.hide_tab {
+    display: none;
+}
+
+#pizza_img {
+    margin: 20px auto 0px auto;
+}
+
+.pizza_price {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    text-align: center;
+    color: red;
+}
+
+#pizza_btns {
+    width: 285px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#direct_map {
+    width: 320px;
+    margin: 0px auto;
+}
+
+#direct_map {
+    text-align: center;
+}
+
+#order_confirm h2 {
+    text-align: center;
+    border-bottom: solid 1px black;
+}
+
+#confirm_btns {
+    clear: both;
+}
+
+#order_confirm a, #order_btns a {
+    float: left;
+    margin-top: 15px;
+    width: 49.5%;
+}
+
+.footer {
+    text-align: center;
+}
