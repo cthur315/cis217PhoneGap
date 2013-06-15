@@ -1,4 +1,19 @@
-$(document).ready(function (){
+var deviceReadyDeferred = $.Deferred();
+var jqmReadyDeferred = $.Deferred();
+
+document.addEventListener("deviceReady", deviceReady, false);
+
+function deviceReady() {
+    deviceReadyDeferred.resolve();
+}
+
+$(document).one("mobileinit", function () {
+    jqmReadyDeferred.resolve();
+});
+
+$.when(deviceReadyDeferred, jqmReadyDeferred).then(doWhenBothFrameworksLoaded);
+
+function doWhenBothFrameworksLoaded() {
     var checked = "input:checked";
     var selected = "option:selected";
 
@@ -254,4 +269,4 @@ $(document).ready(function (){
             num_extras++;
         }
     });
-});
+}
