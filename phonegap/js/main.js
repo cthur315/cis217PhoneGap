@@ -239,10 +239,8 @@ function doWhenBothFrameworksLoaded() {
     $("#submit_order").on("click", function() {
         $("#order_btns").hide();
         $("#saved").hide();
-
-        calc_total();
-
         $("#contact_info").removeClass("hide_tab");
+        calc_total();
     });
 
     $("#save_order").on("click", function() {
