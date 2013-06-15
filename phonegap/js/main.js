@@ -226,7 +226,8 @@ $(document).ready(function (){
         $("#saved").hide();
 
         calc_total();
-        //load php form
+
+        $("#contact_info").removeClass("hide_tab");
     });
 
     $("#save_order").on("click", function() {
