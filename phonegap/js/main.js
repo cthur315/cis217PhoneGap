@@ -7,6 +7,27 @@ function deviceReady() {
     deviceReadyDeferred.resolve();
 }
 
+function showAlert() {
+    navigator.notification.alert(
+        'Your pizza order has been sent!',  // message
+        'Pete\'s Pizza',            // title
+        'Cool'                  // buttonName
+    );
+}
+
+function playBeep() {
+    navigator.notification.beep(3);
+}
+
+function vibrate() {
+    navigator.notification.vibrate(1000);
+}
+
+function notify() {
+    vibrate();
+    showAlert();
+}
+
 $(document).one("mobileinit", function () {
     jqmReadyDeferred.resolve();
 });
